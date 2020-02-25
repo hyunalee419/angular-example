@@ -65,8 +65,10 @@
     margin: 82px auto 32px;
     padding: 0 16px;
     max-width: 960px;
-    flex-direction: column;
-    align-items: center;
+  }
+
+  .content-item {
+    flex: 1;
   }
 
   svg.material-icons {
@@ -316,7 +318,12 @@
 </div>
 
 <div class="content" role="main">
-  <app-todolist></app-todolist>
+  <div class="content-item">
+    <app-todolist></app-todolist>
+  </div>
+  <div class="content-item">
+    <app-m-todolist></app-m-todolist>
+  </div>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -326,5 +333,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
