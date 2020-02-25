@@ -1,0 +1,25 @@
+<p>TodoList</p>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+  <label>
+    할 일:
+    <input
+      type="text"
+      placeholder="할 일을 입력해주세요."
+      required
+      formControlName="todo"
+    >
+  </label>
+  <button type="submit">Submit</button>
+</form>
+
+<ul>
+  <li
+    *ngFor="let todo of todoList; let i = index"
+    (mouseenter)="onMouseEnterLeave(i)"
+    (mouseleave)="onMouseEnterLeave(i)"
+  >
+    {{ todo }}
+    <button *ngIf="isOverTodo[i]" (click)="onDeleteTodo(i)">X</button>
+  </li>
+</ul>
