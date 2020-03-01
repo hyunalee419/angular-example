@@ -1,24 +1,9 @@
-<style>
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-  }
-
-  .content-item {
-    flex: 1;
-  }
-</style>
-
 <div class="content" role="main">
-  <div class="content-item">
-    <app-todolist></app-todolist>
-  </div>
-  <div class="content-item">
-    <app-m-todolist></app-m-todolist>
-  </div>
+  <app-todolist class="content-item"></app-todolist>
+  <app-m-todolist class="content-item"></app-m-todolist>
 </div>
 
-<app-timedisplay></app-timedisplay>
-<app-timedisplay></app-timedisplay>
+<div class="content">
+  <app-timedisplay class="content-item"></app-timedisplay>
+  <app-timedisplay class="content-item"></app-timedisplay>
+</div>

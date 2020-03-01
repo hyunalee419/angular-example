@@ -1,0 +1,9 @@
+.content {
+  display: flex;
+  padding: 0 16px;
+  max-width: 960px;
+}
+
+.content-item {
+  flex: 1;
+}
