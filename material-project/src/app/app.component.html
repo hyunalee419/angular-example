@@ -1,26 +1,36 @@
 <mat-drawer-container class="main-container" autosize>
   <mat-drawer #drawer mode="side">
     <nav>
-      <a routerLink="/hello" (click)="drawer.toggle()">Hello</a>
-      <a routerLink="/timer" (click)="drawer.toggle()">타이머</a>
+      <mat-list role="list">
+        <mat-list-item
+          role="listitem"
+          *ngFor="let route of routers"
+        >
+          <a
+            routerLink="/{{route.path}}"
+            (click)="drawer.toggle()"
+            *ngIf="route.data"
+          >
+            {{route.data.name}}
+          </a>
+        </mat-list-item>
+      </mat-list>
     </nav>
   </mat-drawer>
 
-  <div>
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <button class="menu-icon" mat-icon-button aria-label="menu icon" (click)="drawer.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <a routerLink="/" class="menu-home">
-          ella.exid
-        </a>
-      </mat-toolbar-row>
-    </mat-toolbar>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button class="menu-icon" mat-icon-button aria-label="menu icon" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a routerLink="/" class="menu-home">
+        ella.exid
+      </a>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
+  <div class="content">
+    <router-outlet></router-outlet>
   </div>
 
 </mat-drawer-container>

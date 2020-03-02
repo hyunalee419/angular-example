@@ -1,3 +1,11 @@
+mat-drawer {
+  width: 200px;
+}
+mat-drawer a {
+  text-decoration: none;
+  color: #000000;
+}
+
 .main-container {
   position: absolute;
   top: 0;
