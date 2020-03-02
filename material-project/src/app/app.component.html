@@ -2,6 +2,7 @@
   <mat-drawer #drawer mode="side">
     <nav>
       <a routerLink="/hello" (click)="drawer.toggle()">Hello</a>
+      <a routerLink="/timer" (click)="drawer.toggle()">타이머</a>
     </nav>
   </mat-drawer>
 
@@ -17,7 +18,9 @@
       </mat-toolbar-row>
     </mat-toolbar>
 
-    <router-outlet></router-outlet>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 
 </mat-drawer-container>
