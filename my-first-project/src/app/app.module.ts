@@ -6,12 +6,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { MTodolistComponent } from './m-todolist/m-todolist.component';
 import { TimedisplayComponent } from './timedisplay/timedisplay.component';
 import { TimeDisplayModule } from './timedisplay/timedisplay.module';
 import { TodolistComponent } from './todolist/todolist.component';
+import { MTodolistComponent } from './m-todolist/m-todolist.component';
+
+const appRoutes: Routes = [
+  { path: 'todos', component: TodolistComponent },
+  { path: 'material-todos', component: MTodolistComponent },
+  { path: 'timedisplay', component: TimedisplayComponent }
+];
 
 @NgModule({
   declarations: [
@@ -21,6 +28,10 @@ import { TodolistComponent } from './todolist/todolist.component';
     TimedisplayComponent,
   ],
   imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    ),
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,

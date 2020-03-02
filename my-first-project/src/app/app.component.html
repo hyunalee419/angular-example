@@ -1,9 +1,7 @@
-<div class="content" role="main">
-  <app-todolist class="content-item"></app-todolist>
-  <app-m-todolist class="content-item"></app-m-todolist>
-</div>
+<nav>
+  <a routerLink="/todos" routerLinkActive="active">Todo List</a>
+  <a routerLink="/material-todos" routerLinkActive="active">Material Todo List</a>
+  <a routerLink="/timedisplay" routerLinkActive="active">Time Display</a>
+</nav>
 
-<div class="content">
-  <app-timedisplay class="content-item"></app-timedisplay>
-  <app-timedisplay class="content-item"></app-timedisplay>
-</div>
+<router-outlet></router-outlet>
