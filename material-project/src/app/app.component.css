@@ -1,0 +1,17 @@
+.main-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu-icon {
+  padding: 0 10px;
+}
+
+.menu-home {
+  color: #ffffff;
+  text-decoration: none;
+}
+
