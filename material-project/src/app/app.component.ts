@@ -1,4 +1,4 @@
-import { Component, Injector } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Routes } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { Routes } from '@angular/router';
 export class AppComponent {
   routers: Routes;
 
-  constructor(private injector: Injector) {
-    this.routers = this.injector.get('routes');
+  constructor(@Inject('routes') private routes: Routes) {
+    this.routers = routes;
   }
 }
