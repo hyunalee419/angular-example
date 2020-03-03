@@ -24,6 +24,5 @@ mat-drawer a {
 }
 
 .content {
-  height: calc(100% - 84px);
-  padding: 10px;
+  height: calc(100% - 64px);
 }

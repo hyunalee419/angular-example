@@ -2,3 +2,13 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face{
+  font-family: Happened;
+  src:url('fonts/And This Happened.ttf');
+}
+
+@font-face{
+  font-family: StrickenBrush;
+  src:url('fonts/Stricken Brush.ttf');
+}

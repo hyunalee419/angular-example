@@ -1,0 +1,10 @@
+.main-visual {
+  height: 400px;
+  background: #2b2828;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 125px;
+  font-family: StrickenBrush;
+}
