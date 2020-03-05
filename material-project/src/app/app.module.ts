@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HelloComponent } from './hello/hello.component';
+import { LifeCycleComponent } from './lifecycle/lifecycle.component';
 import { TimedisplayComponent } from './timedisplay/timedisplay.component';
 import { TimeDisplayModule } from './timedisplay/timedisplay.module';
 import { NotFoundComponent } from './notfound/notfound.component';
@@ -20,6 +21,7 @@ import { ServiceSiblingModule } from './service-sibling/service-sibling.module';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'hello', component: HelloComponent, data: { name: 'Hello' } },
+  { path: 'lifecycle', component: LifeCycleComponent, data: { name: '생명주기' } },
   { path: 'timer', component: TimedisplayComponent, data: { name: 'Timer' } },
   { path: 'service-sibling', component: ServiceSiblingComponent, data: { name: 'Service - 공유 데이터 테스트' } },
   { path: '404', component: NotFoundComponent },
@@ -31,6 +33,7 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     HelloComponent,
+    LifeCycleComponent,
     NotFoundComponent
   ],
   imports: [
