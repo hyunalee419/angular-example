@@ -13,6 +13,18 @@
           >
             {{route.data.name}}
           </a>
+          <mat-list-item
+            role="listitem"
+            *ngFor="let child of route.children"
+          >
+            <a
+              routerLink="/{{route.path}}/{{child.path}}"
+              (click)="drawer.toggle()"
+              *ngIf="child.data"
+            >
+              {{child.data.name}}
+            </a>
+          </mat-list-item>
         </mat-list-item>
       </mat-list>
     </nav>
