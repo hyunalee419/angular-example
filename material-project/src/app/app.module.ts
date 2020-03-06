@@ -21,6 +21,7 @@ import { ServiceSiblingComponent } from './service-sibling/service-sibling.compo
 import { ServiceSiblingModule } from './service-sibling/service-sibling.module';
 import { Observable1Component } from './observable/observable1.component';
 import { Observable2EventHttpComponent } from './observable/observable2.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,9 +32,10 @@ const appRoutes: Routes = [
   { path: 'observables',
     children: [
       { path: '1', component: Observable1Component, data: { name: '옵저버1' }},
-      { path: '2', component: Observable2EventHttpComponent, data: { name: '옵저버2' }}
+      { path: '2', component: Observable2EventHttpComponent, data: { name: '옵저버2' }},
+      { path: '', redirectTo: '1', pathMatch: 'full' },
     ],
-    data: { name: 'observables' }
+    data: { name: 'observables' },
   },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '404', pathMatch: 'full' },
@@ -58,7 +60,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
 
-    MatButtonModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatListModule,
+    MatButtonModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatListModule, MatTreeModule,
 
     TimeDisplayModule,
     ServiceSiblingModule,

@@ -9,22 +9,22 @@
           <a
             routerLink="/{{route.path}}"
             (click)="drawer.toggle()"
-            *ngIf="route.data"
           >
             {{route.data.name}}
           </a>
-          <mat-list-item
-            role="listitem"
-            *ngFor="let child of route.children"
-          >
-            <a
-              routerLink="/{{route.path}}/{{child.path}}"
-              (click)="drawer.toggle()"
-              *ngIf="child.data"
+          <mat-list *ngIf="route.children">
+            <mat-list-item
+              role="listitem"
+              *ngFor="let child of route.children"
             >
-              {{child.data.name}}
-            </a>
-          </mat-list-item>
+              <a
+                routerLink="/{{route.path}}/{{child.path}}"
+                (click)="drawer.toggle()"
+              >
+                {{child.data.name}}
+              </a>
+            </mat-list-item>
+          </mat-list>
         </mat-list-item>
       </mat-list>
     </nav>
